@@ -1,0 +1,20 @@
+#include "clvier.dtsi"
+
+&kscan0 {
+    // 左手側の列（COL）ピンアサイン
+    col-gpios
+        = <&gpio1 15 GPIO_ACTIVE_HIGH> // Col0 (11番ピン: P1.15)
+          <&gpio1 11 GPIO_ACTIVE_HIGH> // Col1 (7番ピン:  P1.11)
+          <&gpio1 14 GPIO_ACTIVE_HIGH> // Col2 (10番ピン: P1.14)
+          <&gpio1 13 GPIO_ACTIVE_HIGH> // Col3 (9番ピン:  P1.13)
+          <&gpio0 28 GPIO_ACTIVE_HIGH> // Col4 (3番ピン:  P0.28)
+        ;
+
+    // 左手側の行（ROW）ピンアサイン
+    row-gpios
+        = <&gpio0  3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row0 (2番ピン:  P0.03)
+          <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row1 (4番ピン:  P0.29)
+          <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row2 (22番ピン: P0.10)
+          <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row3 (8番ピン:  P1.12)
+        ;
+};

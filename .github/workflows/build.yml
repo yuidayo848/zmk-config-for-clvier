@@ -11,3 +11,5 @@ jobs:
     uses: urob/zmk-actions/.github/workflows/build-user-config.yml@main
     with:
       toolchain: zephyr-full
+      # ↓ここに「Nix環境を使うな」という絶対命令を追加します
+      use_nix: false

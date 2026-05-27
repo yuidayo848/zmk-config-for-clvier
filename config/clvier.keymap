@@ -1,0 +1,27 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        // 【テスト用デフォルトレイヤー（Layer 0）】
+        // 左手側：5列×4行＝20キー / 右手側：6列×4行＝24キー の合計44キー分を定義しています。
+        // まずはアルファベットが正しく入力できるかテストするための仮の配置です。
+        default_layer {
+            bindings = <
+                // ── 左手側マトリクス（20キー） ──
+                &kp Q  &kp W  &kp E  &kp R  &kp T
+                &kp A  &kp S  &kp D  &kp F  &kp G
+                &kp Z  &kp X  &kp C  &kp V  &kp B
+                &kp C_MUTE &kp LCTRL &kp LALT &kp LSHIFT &kp SPACE
+
+                // ── 右手側マトリクス（24キー） ──
+                &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC
+                &kp H  &kp J  &kp K  &kp L  &kp SEMI &kp SQT
+                &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp ENTER
+                &kp RALT &kp RCTRL &kp RSHIFT &kp RET &kp TAB &kp ESC
+            >;
+        };
+    };
+};

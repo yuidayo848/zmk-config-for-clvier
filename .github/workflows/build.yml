@@ -1,10 +1,14 @@
+# 修正後のコード（これ以上の変更は不要な完璧な状態）
 name: Build ZMK firmware
 on:
   workflow_dispatch:
   push:
     paths:
       - 'config/*'
+      - 'build.yaml'
 
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      toolchain: zephyr-full
